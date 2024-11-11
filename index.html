@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven | Software Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- YouTube iframe (verborgen) -->
+    <div id="music-container" style="display: none;">
+        <iframe id="youtube-player" width="0" height="0" src="" frameborder="0" allow="autoplay"></iframe>
+    </div>
+
+    <!-- Navigatie -->
+    <nav class="navbar">
+        <div class="logo">Steven</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="play-music" onclick="toggleMusic()">Play Music 🎵</button>
+    </nav>
+
+    <!-- Home Sectie -->
+    <section id="home" class="home-section">
+        <div class="profile-image">
+            <img src="lol.jpg" alt="Profile Image">
+        </div>
+        <div class="intro-content">
+            <h1>Hi, I'm <span class="highlight">Steven</span></h1>
+            <h2>A Professional <span class="highlight rotating-title">Discord.js Developer</span></h2>
+            <p class="intro-description">
+                I'm a developer who loves creating high-quality, engaging web experiences. My goal is to build applications that offer seamless, user-friendly experiences for all.
+            </p>
+            <div class="social-icons">
+                <a href="https://github.com/stevenvfx12"><i class="fab fa-github"></i></a>
+                <a href="https://www.twitch.tv/vdpsteven"><i class="fab fa-twitch"></i></a>
+                <a href="https://x.com/steefs165323"><i class="fab fa-twitter"></i></a>
+            </div>
+            <button class="hire-me" onclick="window.open('https://discord.com/users/977920487931932753')">Hire Me</button>
+        </div>
+    </section>
+
+    <!-- About Me Sectie -->
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>
+            Hey, My name is Steven, im a 15 year old student who loves coding projects. i live in the <a class="a" href="https://www.google.com/maps/place/Netherlands/@51.9886662,4.5016092,14z/data=!4m6!3m5!1s0x47c609c3db87e4bb:0xb3a175ceffbd0a9f!8m2!3d52.132633!4d5.291266!16zL20vMDU5ajI?entry=ttu&g_ep=EgoyMDI0MTEwNi4wIKXMDSoASAFQAw%3D%3D    " target="_blank">Netherlands</a> i got into coding when i was 12, and was struggeling a bit. but after grinding and grinding, i finnaly got there, im super greatfull for everything. so listen to me, if your struggeling with things, you can always dm me for help. i will always be there for you. and remember , never give up on your dreams.
+        </p>
+    </section>
+
+    <!-- Services Sectie -->
+    <section id="services" class="services-section">
+        <h2>Services</h2>
+        <div class="services-cards">
+            <div class="service-card">
+                <i class="fas fa-code service-icon"></i>
+                <h3>Web Development</h3>
+                <p>Building optimized and scalable web applications tailored to your needs.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-paint-brush service-icon"></i>
+                <h3>Discord.js development</h3>
+                <p>Building the best bots out there using discord.js v14 , music bots , moderation bots and so many other things.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-chart-line service-icon"></i>
+                <h3>Mod</h3>
+                <p>Moderating discord servers with over 200k + members!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <!-- Contact Me Sectie -->
+<section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        
+        <button type="submit" class="send-button">Send Message</button>
+    </form>
+</section>
+
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="scrollToTop()">↑</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
