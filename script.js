@@ -1,16 +1,34 @@
-// Tekst Rotatie
-const titles = [  "Web Developer", "Full-Stack Developer"];
+const titles = ["Web Developerr", "Full-Stack Developerr", "Discord.js Developerr"];
 let titleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const rotatingTitle = document.querySelector(".rotating-title");
 
-function rotateTitle() {
-    const rotatingTitle = document.querySelector(".rotating-title");
-    rotatingTitle.textContent = titles[titleIndex];
-    titleIndex = (titleIndex + 1) % titles.length;
+function typeEffect() {
+    const currentTitle = titles[titleIndex];
+
+    if (isDeleting) {
+        rotatingTitle.textContent = currentTitle.substring(0, charIndex--);
+    } else {
+        rotatingTitle.textContent = currentTitle.substring(0, charIndex++);
+    }
+
+    let delay = isDeleting ? 100 : 150;
+
+    if (!isDeleting && charIndex === currentTitle.length) {
+        delay = 2000;
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        titleIndex = (titleIndex + 1) % titles.length;
+        delay = 500;
+    }
+
+    setTimeout(typeEffect, delay);
 }
 
-setInterval(rotateTitle, 5000);
+typeEffect();
 
-// Back to Top button functionaliteit
 const backToTopButton = document.querySelector('.back-to-top');
 
 window.addEventListener('scroll', () => {
@@ -25,7 +43,6 @@ backToTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Muziek afspelen/pauzeren met YouTube
 let isPlaying = false;
 
 function toggleMusic() {
